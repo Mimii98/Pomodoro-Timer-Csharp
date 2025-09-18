@@ -28,18 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TimerBox));
+            BtnStart = new Button();
+            lbl1 = new Label();
+            btnreset = new Button();
             SuspendLayout();
+            // 
+            // BtnStart
+            // 
+            BtnStart.BackColor = Color.RosyBrown;
+            BtnStart.Font = new Font("MV Boli", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BtnStart.Image = Timer.Properties.Resources._20250306_215610;
+            BtnStart.Location = new Point(12, 161);
+            BtnStart.Name = "BtnStart";
+            BtnStart.Size = new Size(94, 54);
+            BtnStart.TabIndex = 2;
+            BtnStart.Text = "Start";
+            BtnStart.UseVisualStyleBackColor = false;
+            // 
+            // lbl1
+            // 
+            lbl1.Font = new Font("MV Boli", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl1.Image = Timer.Properties.Resources._20250306_215610;
+            lbl1.Location = new Point(12, 24);
+            lbl1.Name = "lbl1";
+            lbl1.Size = new Size(196, 113);
+            lbl1.TabIndex = 3;
+            lbl1.Text = "Time ";
+            lbl1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // btnreset
+            // 
+            btnreset.Font = new Font("MV Boli", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnreset.Image = Timer.Properties.Resources._20250306_215610;
+            btnreset.Location = new Point(114, 161);
+            btnreset.Name = "btnreset";
+            btnreset.Size = new Size(94, 54);
+            btnreset.TabIndex = 4;
+            btnreset.Text = "Reset";
+            btnreset.UseVisualStyleBackColor = true;
             // 
             // TimerBox
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(625, 539);
+            BackColor = Color.FromArgb(255, 192, 255);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(225, 219);
+            Controls.Add(btnreset);
+            Controls.Add(lbl1);
+            Controls.Add(BtnStart);
+            Margin = new Padding(2);
             Name = "TimerBox";
-            Text = "Timer";
+            Text = "Promodoro Timer";
             ResumeLayout(false);
         }
 
         #endregion
+        private Button BtnStart;
+        private Label lbl1;
+        private Button btnreset;
     }
 }
