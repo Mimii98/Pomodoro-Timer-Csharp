@@ -88,11 +88,11 @@
             lbl2.AutoSize = true;
             lbl2.Font = new Font("MV Boli", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbl2.Image = Timer.Properties.Resources._20250306_215610;
-            lbl2.Location = new Point(87, 112);
+            lbl2.Location = new Point(29, 112);
             lbl2.Name = "lbl2";
-            lbl2.Size = new Size(48, 20);
+            lbl2.Size = new Size(119, 20);
             lbl2.TabIndex = 5;
-            lbl2.Text = "0,0h";
+            lbl2.Text = "Work Time :3";
             lbl2.Click += lbl2_Click;
             // 
             // TimerBox
