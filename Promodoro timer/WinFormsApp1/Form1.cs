@@ -11,7 +11,6 @@ namespace WinFormsApp1
         public TimerBox()
         {
             InitializeComponent();
-           
         }
 
         private void BtnStart_Click(object sender, EventArgs e)
@@ -22,7 +21,7 @@ namespace WinFormsApp1
             this.timeleft = new TimeSpan(0, 0, 10);
             this.breaktime = new TimeSpan(0, 0, 5);
            
-            lbl.Text = timeleft.ToString(@"mm\:ss");
+          
 
            
         }
@@ -37,19 +36,22 @@ namespace WinFormsApp1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            timeleft = timeleft.Subtract(TimeSpan.FromSeconds(1));
+            lbl.Text = timeleft.ToString(@"mm\:ss");
             IsBreak = false;
-            if (timeleft == TimeSpan.Zero || IsBreak == false) 
+
+            if (breaktime.TotalSeconds == 0 && IsBreak == false) 
             {
                 timeleft = timeleft.Subtract(TimeSpan.FromSeconds(1));
                 lbl.Text = timeleft.ToString(@"mm\:ss");
                 IsBreak = true;
 
             }
-            if (breaktime == TimeSpan.Zero || IsBreak == true)
+            if (timeleft.TotalSeconds == 0 && IsBreak == true)
             {
               breaktime = breaktime.Subtract(TimeSpan.FromSeconds(1));
               lbl.Text = breaktime.ToString(@"mm\:ss");
-              IsBreak = true;
+              IsBreak = false;
             }
 
 
