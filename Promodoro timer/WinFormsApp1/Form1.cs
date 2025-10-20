@@ -18,6 +18,7 @@ namespace WinFormsApp1 // Namespace des Projekts
             InitializeComponent(); // Lädt die Komponenten des Formulars
             worksound.Load(); // Lädt den Arbeitszeit-Sound
             breaksound.Load(); // Lädt den Pausen-Sound
+            this.TopMost = true; // Setzt das Formular immer im Vordergrund
         }
 
         private void BtnStart_Click(object sender, EventArgs e) // Ereignishandler für den Start-Button
