@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TimerBox));
             BtnStart = new Button();
             lbl = new Label();
             btnreset = new Button();
@@ -40,12 +39,11 @@
             // BtnStart
             // 
             BtnStart.BackColor = Color.RosyBrown;
-            BtnStart.BackgroundImage = Timer.Properties.Resources._20250306_215610;
             BtnStart.Font = new Font("MV Boli", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BtnStart.Image = Timer.Properties.Resources._20250306_215610;
-            BtnStart.Location = new Point(9, 144);
+            BtnStart.Location = new Point(9, 137);
             BtnStart.Name = "BtnStart";
-            BtnStart.Size = new Size(94, 54);
+            BtnStart.Size = new Size(94, 42);
             BtnStart.TabIndex = 2;
             BtnStart.Text = "Start";
             BtnStart.UseVisualStyleBackColor = false;
@@ -55,7 +53,6 @@
             // 
             lbl.BackColor = Color.RosyBrown;
             lbl.Font = new Font("MV Boli", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl.Image = Timer.Properties.Resources._20250306_215610;
             lbl.Location = new Point(9, 11);
             lbl.Name = "lbl";
             lbl.Size = new Size(196, 87);
@@ -67,12 +64,11 @@
             // btnreset
             // 
             btnreset.BackColor = Color.RosyBrown;
-            btnreset.BackgroundImage = Timer.Properties.Resources._20250306_215610;
             btnreset.Font = new Font("MV Boli", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnreset.Image = Timer.Properties.Resources._20250306_215610;
-            btnreset.Location = new Point(111, 144);
+            btnreset.Location = new Point(111, 137);
             btnreset.Name = "btnreset";
-            btnreset.Size = new Size(94, 54);
+            btnreset.Size = new Size(94, 42);
             btnreset.TabIndex = 4;
             btnreset.Text = "Reset";
             btnreset.UseVisualStyleBackColor = false;
@@ -87,8 +83,7 @@
             // 
             lbl2.AutoSize = true;
             lbl2.Font = new Font("MV Boli", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl2.Image = Timer.Properties.Resources._20250306_215610;
-            lbl2.Location = new Point(29, 112);
+            lbl2.Location = new Point(35, 114);
             lbl2.Name = "lbl2";
             lbl2.Size = new Size(119, 20);
             lbl2.TabIndex = 5;
@@ -100,8 +95,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 255);
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(213, 210);
+            ClientSize = new Size(213, 191);
             Controls.Add(lbl2);
             Controls.Add(btnreset);
             Controls.Add(lbl);
