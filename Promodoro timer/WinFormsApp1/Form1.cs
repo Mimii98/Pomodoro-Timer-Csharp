@@ -26,8 +26,8 @@ namespace WinFormsApp1 // Namespace des Projekts
 
             timer1.Start(); // Startet den Timer
             breaksound.Play(); // Spielt den Pausensound ab
-            this.timeleft = new TimeSpan(0, 0, 10); // Setzt die Arbeitszeit auf 25 Minuten
-            this.breaktime = new TimeSpan(0, 0, 5); // Setzt die Pausenzeit auf 5 Minuten
+            this.timeleft = new TimeSpan(0, 25, 0); // Setzt die Arbeitszeit auf 25 Minuten
+            this.breaktime = new TimeSpan(0, 5, 0); // Setzt die Pausenzeit auf 5 Minuten
 
         }
 
@@ -60,7 +60,7 @@ namespace WinFormsApp1 // Namespace des Projekts
                 if (timeleft.TotalSeconds <= 0) // Wenn die Zeit abgelaufen ist
                 {
                        Isactive = true; // Wechselt zur Arbeitszeit
-                       timeleft = new TimeSpan(0, 0, 10); // Setzt die verbleibende Zeit auf die Arbeitszeit
+                       timeleft = new TimeSpan(0, 5, 0); // Setzt die verbleibende Zeit auf die Arbeitszeit
                        worksound.Play(); // Spielt den Arbeitszeit-Sound ab
                        lbl2.Text = "Work Time! :>"; // Aktualisiert das Label mit der Arbeitszeitmeldung
                 }
