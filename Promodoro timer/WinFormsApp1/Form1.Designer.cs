@@ -43,9 +43,10 @@
             BtnStart.FlatStyle = FlatStyle.Popup;
             BtnStart.Font = new Font("MV Boli", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BtnStart.ForeColor = Color.BurlyWood;
-            BtnStart.Location = new Point(9, 121);
+            BtnStart.Location = new Point(8, 91);
+            BtnStart.Margin = new Padding(3, 2, 3, 2);
             BtnStart.Name = "BtnStart";
-            BtnStart.Size = new Size(94, 58);
+            BtnStart.Size = new Size(82, 44);
             BtnStart.TabIndex = 2;
             BtnStart.Text = "Start";
             BtnStart.UseVisualStyleBackColor = false;
@@ -55,9 +56,9 @@
             // 
             lbl.BackColor = Color.Transparent;
             lbl.Font = new Font("MV Boli", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl.Location = new Point(9, 11);
+            lbl.Location = new Point(8, 8);
             lbl.Name = "lbl";
-            lbl.Size = new Size(179, 87);
+            lbl.Size = new Size(157, 65);
             lbl.TabIndex = 3;
             lbl.Text = "00:00";
             lbl.TextAlign = ContentAlignment.TopCenter;
@@ -69,9 +70,10 @@
             btnreset.FlatStyle = FlatStyle.Popup;
             btnreset.Font = new Font("MV Boli", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnreset.ForeColor = Color.Tan;
-            btnreset.Location = new Point(111, 121);
+            btnreset.Location = new Point(97, 91);
+            btnreset.Margin = new Padding(3, 2, 3, 2);
             btnreset.Name = "btnreset";
-            btnreset.Size = new Size(94, 58);
+            btnreset.Size = new Size(82, 44);
             btnreset.TabIndex = 4;
             btnreset.Text = "Reset";
             btnreset.UseVisualStyleBackColor = false;
@@ -87,24 +89,25 @@
             lbl2.AutoSize = true;
             lbl2.BackColor = Color.Transparent;
             lbl2.Font = new Font("MV Boli", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl2.Location = new Point(43, 98);
+            lbl2.Location = new Point(38, 74);
             lbl2.Name = "lbl2";
-            lbl2.Size = new Size(119, 20);
+            lbl2.Size = new Size(99, 17);
             lbl2.TabIndex = 5;
             lbl2.Text = "Work Time :3";
             lbl2.Click += lbl2_Click;
             // 
             // TimerBox
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(213, 191);
+            ClientSize = new Size(186, 143);
             Controls.Add(lbl2);
             Controls.Add(btnreset);
             Controls.Add(lbl);
             Controls.Add(BtnStart);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2);
             Name = "TimerBox";
             Text = "Promodoro Timer";

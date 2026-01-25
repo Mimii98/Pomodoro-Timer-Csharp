@@ -1,4 +1,5 @@
 using System.Media; // für Sound
+using System.Runtime.CompilerServices;
 using System.Threading; // wird hier im code nicht benutzt 
 using System.Timers; // wird hier im code nicht benutzt
 using System.Windows.Forms; // für Windows Forms
@@ -12,13 +13,15 @@ namespace WinFormsApp1 // Namespace des Projekts
         bool Isactive = true;
         SoundPlayer breaksound = new SoundPlayer(@"Resources\315694__acollier123__casio-1000p-preset-piano-c.wav"); // Pfad zum Sound für die Pause
         SoundPlayer worksound = new SoundPlayer(@"Resources\346956__alexlancemx__si_bemol_tone_2016.wav"); // Pfad zum Sound für die Arbeitszeit
+        
 
         public TimerBox() // Konstruktor der Klasse
         {
             InitializeComponent(); // Lädt die Komponenten des Formulars
             worksound.Load(); // Lädt den Arbeitszeit-Sound
             breaksound.Load(); // Lädt den Pausen-Sound
-            this.TopMost = true; // Setzt das Formular immer im Vordergrund
+            this.TopMost = true; // Setzt das Formular immer im Vordergrund#
+            this.MaximizeBox = false; // Deaktiviert die Maximieren-Schaltfläche
         }
 
         private void BtnStart_Click(object sender, EventArgs e) // Ereignishandler für den Start-Button
@@ -28,7 +31,7 @@ namespace WinFormsApp1 // Namespace des Projekts
             breaksound.Play(); // Spielt den Pausensound ab
             this.timeleft = new TimeSpan(0, 25, 0); // Setzt die Arbeitszeit auf 25 Minuten
             this.breaktime = new TimeSpan(0, 5, 0); // Setzt die Pausenzeit auf 5 Minuten
-
+            
         }
 
         private void btnreset_Click(object sender, EventArgs e) // Ereignishandler für den Reset-Button
@@ -60,9 +63,13 @@ namespace WinFormsApp1 // Namespace des Projekts
                 if (timeleft.TotalSeconds <= 0) // Wenn die Zeit abgelaufen ist
                 {
                        Isactive = true; // Wechselt zur Arbeitszeit
-                       timeleft = new TimeSpan(0, 5, 0); // Setzt die verbleibende Zeit auf die Arbeitszeit
+                       timeleft = new TimeSpan(0, 25, 0); // Setzt die verbleibende Zeit auf die Arbeitszeit
                        worksound.Play(); // Spielt den Arbeitszeit-Sound ab
                        lbl2.Text = "Work Time! :>"; // Aktualisiert das Label mit der Arbeitszeitmeldung
+                }
+                if (this.WindowState == FormWindowState.Minimized)
+                { 
+                    this.WindowState = FormWindowState.Normal; // Stellt das Fenster wieder her, wenn es minimiert ist
                 }
             }
         }
