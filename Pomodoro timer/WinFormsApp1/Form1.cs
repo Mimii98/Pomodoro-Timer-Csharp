@@ -1,8 +1,8 @@
-using System.Media; // für Sound
+using System.Media; // fÃ¼r Sound
 using System.Runtime.CompilerServices;
 using System.Threading; // wird hier im code nicht benutzt 
 using System.Timers; // wird hier im code nicht benutzt
-using System.Windows.Forms; // für Windows Forms
+using System.Windows.Forms; // fÃ¼r Windows Forms
 namespace WinFormsApp1 // Namespace des Projekts
 {
     public partial class TimerBox : Form // Hauptklasse des Formulars
@@ -11,20 +11,20 @@ namespace WinFormsApp1 // Namespace des Projekts
         public TimeSpan timeleft; 
         public TimeSpan breaktime;
         bool Isactive = true;
-        SoundPlayer breaksound = new SoundPlayer(@"Resources\315694__acollier123__casio-1000p-preset-piano-c.wav"); // Pfad zum Sound für die Pause
-        SoundPlayer worksound = new SoundPlayer(@"Resources\346956__alexlancemx__si_bemol_tone_2016.wav"); // Pfad zum Sound für die Arbeitszeit
+        SoundPlayer breaksound = new SoundPlayer(@"Resources\315694__acollier123__casio-1000p-preset-piano-c.wav"); // Pfad zum Sound fï¿½r die Pause
+        SoundPlayer worksound = new SoundPlayer(@"Resources\346956__alexlancemx__si_bemol_tone_2016.wav"); // Pfad zum Sound fï¿½r die Arbeitszeit
         
 
         public TimerBox() // Konstruktor der Klasse
         {
-            InitializeComponent(); // Lädt die Komponenten des Formulars
-            worksound.Load(); // Lädt den Arbeitszeit-Sound
-            breaksound.Load(); // Lädt den Pausen-Sound
+            InitializeComponent(); // LÃ¤dt die Komponenten des Formulars
+            worksound.Load(); // LÃ¤dt den Arbeitszeit-Sound
+            breaksound.Load(); // LÃ¤dt den Pausen-Sound
             this.TopMost = true; // Setzt das Formular immer im Vordergrund#
-            this.MaximizeBox = false; // Deaktiviert die Maximieren-Schaltfläche
+            this.MaximizeBox = false; // Deaktiviert die Maximieren-SchaltflÃ¤che
         }
 
-        private void BtnStart_Click(object sender, EventArgs e) // Ereignishandler für den Start-Button
+        private void BtnStart_Click(object sender, EventArgs e) // Ereignishandler fÃ¼r den Start-Button
         {
 
             timer1.Start(); // Startet den Timer
@@ -34,15 +34,15 @@ namespace WinFormsApp1 // Namespace des Projekts
             
         }
 
-        private void btnreset_Click(object sender, EventArgs e) // Ereignishandler für den Reset-Button
+        private void btnreset_Click(object sender, EventArgs e) // Ereignishandler fÃ¼r den Reset-Button
         {
           
             timer1.Stop(); // Stopt den Timer
-            lbl.Text = "00:00"; // Setzt das Label auf 00:00 zurück
+            lbl.Text = "00:00"; // Setzt das Label auf 00:00 zurÃ¼ck
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e) // Ereignishandler für den Timer-Tick
+        private void timer1_Tick(object sender, EventArgs e) // Ereignishandler fÃ¼r den Timer-Tick
         {
             if (Isactive) // Wenn die Arbeitszeit aktiv ist
             {
@@ -95,11 +95,11 @@ namespace WinFormsApp1 // Namespace des Projekts
 
         private void lbl2_Click(object sender, EventArgs e)
         {
-            // Unnötige Methode für dieses Projekt 
+            // UnnÃ¶tige Methode fÃ¼r dieses Projekt 
         }
         private void lbl_Click(object sender, EventArgs e)
         {
-            // Unnötige Methode für dieses Projekt 
+            // UnnÃ¶tige Methode fÃ¼r dieses Projekt 
         }
     }
 }
